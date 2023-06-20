@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiscalização</title>
+</head>
+<body>
+    <h1>Verificador de nacionalidade</h1>
+    <input type="text" name="txtpais" id="txtpais" placeholder="País onde você mora">
+    <input type="button" value="Registrar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar() {
+            var res = document.getElementById('res')
+            var tpais = document.getElementById('txtpais')
+            var nac = tpais.value
+            res.innerHTML = `Você mora no ${nac}`
+            if (nac == 'Brasil', 'brasil') {
+                res.innerHTML += `<p>Você é <strong>brasileiro</strong>!</p>`
+            } else {
+                res.innerHTML += `<p>Você é estrangeiro!</p>`
+            }
+        }
+    </script>
+
+</body>
+</html>
